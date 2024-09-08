@@ -2,6 +2,7 @@ import { getChallenges } from "@/packages/leetcode/utils";
 import { createChallenge } from "./packages/chady/utils/create-challenge";
 import { createChallengeDto } from "./packages/chady/dtos/create-challenge.dto";
 import { difficultyFromLeetcode } from "./packages/core/utils/difficulty-leetcode-to-chady";
+import { htmlToMarkdown } from "./packages/core/utils/html-to-markdown";
 
 async function main() {
 	const challenges = await getChallenges({});
@@ -12,7 +13,7 @@ async function main() {
 		try {
 			const parsedChallenge = createChallengeDto.parse({
 				title: challenge.title,
-				description: challenge.content,
+				description: htmlToMarkdown(challenge.content),
 				difficulty: difficultyFromLeetcode(challenge.difficulty),
 			});
 			createChallenge(parsedChallenge);

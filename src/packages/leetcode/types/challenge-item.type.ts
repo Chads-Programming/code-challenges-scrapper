@@ -1,3 +1,5 @@
+import { HTML } from "@/packages/core/types";
+
 export type Difficulty = "EASY" | "MEDIUM" | "HARD";
 
 export interface ChallengeItem {
@@ -6,7 +8,7 @@ export interface ChallengeItem {
 	acRate: number;
 	difficulty: Difficulty;
 	freqBar: any;
-	content: string;
+	content: HTML;
 	frontendQuestionId: string;
 	isFavor: boolean;
 	paidOnly: boolean;

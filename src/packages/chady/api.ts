@@ -1,7 +1,6 @@
 import { envs } from "@/utils/env";
 import { Client, cacheExchange, fetchExchange } from "@urql/core";
 
-
 const chadyApi = new Client({
 	url: envs.CHADY_API_URL,
 	fetchOptions: {

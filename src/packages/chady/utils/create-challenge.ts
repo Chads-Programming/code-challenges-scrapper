@@ -1,8 +1,5 @@
 import chadyApi from "../api";
-import {
-	CreateChallenge,
-	createChallengeDto,
-} from "../dtos/create-challenge.dto";
+import { CreateChallenge } from "../dtos/create-challenge.dto";
 import { CREATE_CHALLENGE_MUTATION } from "../mutations";
 
 export async function createChallenge(challenge: CreateChallenge) {
