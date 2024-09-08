@@ -1,8 +1,10 @@
+export type Difficulty = "EASY" | "MEDIUM" | "HARD";
+
 export interface ChallengeItem {
 	codeSnippets: CodeSnippet[];
 	exampleTestcaseList: string[];
 	acRate: number;
-	difficulty: string;
+	difficulty: Difficulty;
 	freqBar: any;
 	content: string;
 	frontendQuestionId: string;
